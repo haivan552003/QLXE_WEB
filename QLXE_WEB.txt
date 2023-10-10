@@ -1,0 +1,20 @@
+Giới thiệu dự án: Nhằm mục đích hỗ trợ cửa hàng trong việc quản lý các sản phẩm trong cửa hàng.
+
+Được thiết kế bằng:
+- My SQL
+- .Net 6 
+
+Sử dụng công cụ:
+- My SQL WorkBench
+- Visual Studio 2022
+
+Cách cài đặt:
+- Chạy file CSDL.sql bằng mySQL WorkBench
+- Mở thư mục QLXE_WEB bằng Visual Studio
+
+Cách sử dụng:
+- Bấm F5 để chạy web
+- Nhập tài khoản: vanlth
+- Nhập mật khẩu: 1234
+- Bấm Đăng nhập
+- Thực hiện các chức năng CRUD của web
