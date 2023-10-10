@@ -1,0 +1,53 @@
+﻿@model IEnumerable<QLXE_WEB.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdUNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUNavigation.IdU)
+            </td>
+            <td>
+                    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.IdP">Edit</a> |                    
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdP">Delete</a> |
+                    <a asp-action="Details" class="btn btn-light" asp-route-id="@item.IdP">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

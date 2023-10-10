@@ -1,0 +1,34 @@
+﻿@model QLXE_WEB.Models.Login;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post)) 
+    {
+        if (ViewBag.LoginStatus != null)
+        {
+            if (ViewBag.LoginStatus == 0)
+            {
+               <div class="alert alert-danger">Login fail</div>
+            }
+        }
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Account:</label>
+        @Html.TextBoxFor(x =>x.AccountID, new{@class="form-control", @id="exampleInputEmail1", @placeholder="vanlth"})
+      </div>
+       
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password:</label>
+            @Html.PasswordFor(x =>x.Password, new{@class="form-control", @id="exampleInputPassword1", @placeholder="1234"})
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    }
+    
+</div>
